@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mjchp46um-python-gitops
+  description: This is GitOps manifest for mjchp46um-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: mjchp46um-python
+    backstage.io/kubernetes-id: mjchp46um-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: mjchp46um-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:mjchp46um-python
